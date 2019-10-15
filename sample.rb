@@ -2,9 +2,11 @@ class Player
     def hand
       # コンソールを入力待ち状態にし、プレイヤーがコンソールから打ち込んだ値を出力する処理のメソッドの処理をこの中に作成する
       while true
-        me = gets.to_i
-        if me == 0 || me == 1 || me == 2
-          return me
+        me = gets.chomp
+        # if me === 0 || me === 1 || me === 2
+        x = ["0", "1", "2"]
+        if x.include?(me)
+          return me.to_i
         else
           puts "0~2の数字を入力してください。"
         end
